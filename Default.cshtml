@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cache Bust</title>
+    <link rel="stylesheet" href="@CacheBust.FingerPrint("/css/mainStyle.css")" />
+    <link rel="shortcut icon" href="@CacheBust.FingerPrint("/favicon.ico")" type="image/x-icon" />
+</head>
+<body>
+    <div>
+        <h1>Cache busting In C# without querystrings</h1>
+        <h4>Bring up the dev tools and look at the css, favicon and js paths!</h4>
+        <h5>CSS Path Is - @CacheBust.FingerPrint("/css/mainStyle.css").ToString()</h5>
+        <h5>Favicon Path Is - @CacheBust.FingerPrint("/favicon.ico").ToString()</h5>
+        <h5>JS Path Is - @CacheBust.FingerPrint("/scripts/mainScripts.js").ToString()</h5>
+        <p>Make a change to any of the files, re-run and the path will have changed - totally effective cache busting without using a querystring!</p>
+    </div>
+    <script src="@CacheBust.FingerPrint("/scripts/mainScripts.js")"></script>
+</body>
+</html>
